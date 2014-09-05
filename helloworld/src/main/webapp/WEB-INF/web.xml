@@ -1,0 +1,26 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Learning Studio Hello World</display-name>
+
+	<servlet>
+		<servlet-name>OAuth1Signature</servlet-name>
+		<servlet-class>com.pearson.pdn.learningstudio.helloworld.OAuth1SignatureServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>OAuth2Assertion</servlet-name>
+		<servlet-class>com.pearson.pdn.learningstudio.helloworld.OAuth2AssertionServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>OAuth1Signature</servlet-name>
+		<url-pattern>/oauth1/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OAuth2Assertion</servlet-name>
+		<url-pattern>/oauth2/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>
